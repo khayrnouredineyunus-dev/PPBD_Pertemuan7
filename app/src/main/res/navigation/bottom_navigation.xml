@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.example.myshop.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.example.myshop.CartFragment"
@@ -24,5 +28,10 @@
         android:id="@+id/checkoutFragment"
         android:name="com.example.myshop.CheckoutFragment"
         android:label="fragment_checkout"
-        tools:layout="@layout/fragment_checkout" />
+        tools:layout="@layout/fragment_checkout" >
+        <argument
+            android:name="productName"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
 </navigation>
